@@ -27,6 +27,10 @@ compose.desktop {
             targetFormats(TargetFormat.Exe)
             packageName = "BisectionMethod"
             packageVersion = "1.0.0"
+
+            windows {
+                iconFile.set(project.file("src/main/kotlin/icons/vk.ico"))
+            }
         }
     }
 }
