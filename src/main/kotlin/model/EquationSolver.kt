@@ -33,8 +33,14 @@ fun bisectionMethod(a: Double, b: Double): Pair<Double?, String> {
     val fa = f(actualA)
     val fb = f(actualB)
 
-    if (fa.isNaN() || fb.isNaN()) return null to "Функция не определена на границах"
-    if (fa * fb > 0) return null to "f(a) и f(b) одного знака"
+    if (fa.isNaN() || fb.isNaN()) return null to "Функция не определена на границах интервала"
+
+    // Улучшенное сообщение об ошибке
+    if (fa * fb > 0) {
+        return null to "Функция имеет одинаковый знак на концах интервала. " +
+                "Корень отсутствует в данном интервале. " +
+                "Попробуйте другие значения границ."
+    }
 
     var low = actualA
     var high = actualB
