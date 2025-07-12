@@ -26,7 +26,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Exe)
             packageName = "BisectionMethod"
-            packageVersion = "1.0.0"
+            packageVersion = "1.1.0"
 
             windows {
                 iconFile.set(project.file("src/main/kotlin/icons/vk.ico"))
